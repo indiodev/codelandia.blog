@@ -68,7 +68,7 @@ const Footer = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 );
 Footer.displayName = "CardFooter";
 
-export const Card = {
+const Card = {
   Root,
   Content,
   Description,
@@ -76,3 +76,5 @@ export const Card = {
   Header,
   Title,
 };
+
+export default Card;

@@ -1,9 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { ReactElement } from "react";
-import { Input } from "~/components";
+import Input from "~/components/ui/input";
 
-export function SearchInput(): ReactElement {
+export default function SearchInput(): ReactElement {
   const router = useRouter();
   return (
     <Input
