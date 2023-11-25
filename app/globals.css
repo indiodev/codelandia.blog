@@ -54,6 +54,26 @@
     @apply border-border;
   }
 
+  /* Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #574ae8 #455a6445;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #455a6445;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #574ae8;
+    /* border-radius: 20px; */
+  }
+
   html {
     @media (max-width: 1090px) {
       font-size: 87.5%;

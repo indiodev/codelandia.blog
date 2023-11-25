@@ -19,9 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body
-        className={`${lexend_deca.className} flex flex-col h-screen w-screen`}
-      >
+      <body className={`${lexend_deca.className} flex flex-col h-screen`}>
         {children}
       </body>
     </html>

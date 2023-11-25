@@ -7,7 +7,7 @@ export default function SearchInput(): ReactElement {
   const router = useRouter();
   return (
     <Input
-      placeholder="Pesquisar no blog"
+      placeholder="Pesquise por título ou autor"
       className="bg-[rgba(255,255,255,0.2)] text-white border-transparent placeholder:text-gray-200 h-10 md:h-16 text-sm md:text-lg"
       onChange={(event) => {
         if (event.target.value === "") {

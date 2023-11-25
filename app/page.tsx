@@ -14,11 +14,14 @@ async function getPosts({
   //   `http://localhost:3000/api/posts?search=${search}`
   // );
   // const data = await response.json();
-  const response = await axios.get<Post[]>("http://localhost:3000/api/posts", {
-    params: {
-      search,
-    },
-  });
+  const response = await axios.get<Post[]>(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/posts`,
+    {
+      params: {
+        search,
+      },
+    }
+  );
   return { posts: response.data };
 }
 
@@ -38,8 +41,8 @@ export default async function Home({ searchParams: { search = "" } }: Props) {
         </div>
         <SearchInput />
       </Header>
-      <main className="container overflow-hidden mt-[10.2813rem] md:mt-[15.375rem] max-w-[calc(max-x-4xl + 4px)] py-[3.125rem] md:py-[6.25rem]">
-        <section className="h-full overflow-y-auto w-full flex flex-col gap-[1.5625rem] md:gap-[3.125rem]">
+      <main className="container mt-[10.2813rem] md:mt-[15.375rem] max-w-[calc(max-x-4xl + 4px)] py-[3.125rem] md:py-[6.25rem]">
+        <section className="h-full w-full flex flex-col gap-[1.5625rem] md:gap-[3.125rem]">
           {posts.length > 0 &&
             posts.map((post) => <PostCard key={post.id} data={post} />)}
         </section>

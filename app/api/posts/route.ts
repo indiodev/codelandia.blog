@@ -35,6 +35,9 @@ export async function GET(request: NextRequest) {
         mode: "insensitive",
       },
     },
+    orderBy: {
+      created_at: "asc",
+    },
   });
 
   return NextResponse.json(posts);
